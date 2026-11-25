@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATK Mart | Toko Alat Tulis Online</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home">✏️ ATK<span>Mart</span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#home">Beranda</a><a href="#produk">Produk</a><a href="#checkout">Checkout</a>
+    </nav>
+    <button class="cart-button" id="cartJump" aria-label="Lihat keranjang">🛒 Keranjang <span id="cartCount">0</span></button>
+  </div>
+</header>
+<main>
+  <section class="hero container" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">Belanja alat tulis lebih mudah</p>
+      <h1>Perlengkapan belajar, <span>semua ada.</span></h1>
+      <p>Temukan alat tulis dan kebutuhan sekolah/kuliah dengan harga bersahabat.</p>
+      <a class="primary-link" href="#produk">Belanja sekarang ↓</a>
+    </div>
+    <div class="hero-art" aria-label="Ilustrasi alat tulis">📚<span>✏️</span><span>🖊️</span><span>📒</span></div>
+  </section>
+  <section class="container section" id="produk">
+    <div class="section-heading"><div><p class="eyebrow">Katalog</p><h2>Produk pilihan</h2></div>
+      <input id="searchInput" type="search" placeholder="Cari produk..." aria-label="Cari produk">
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+  <section class="container section cart-checkout" id="checkout">
+    <div class="cart-panel">
+      <p class="eyebrow">Pesanan Anda</p><h2>Keranjang belanja</h2>
+      <div id="cartItems"><p class="empty">Keranjang masih kosong. Tambahkan produk terlebih dahulu.</p></div>
+      <div class="total-row"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+    </div>
+    <form class="checkout-panel" id="checkoutForm">
+      <p class="eyebrow">Checkout (simulasi)</p><h2>Data pembeli</h2>
+      <label for="customerName">Nama lengkap *</label><input id="customerName" name="name" placeholder="Nama Anda" required>
+      <label for="customerEmail">Email *</label><input id="customerEmail" name="email" type="email" placeholder="nama@email.com" required>
+      <label for="customerAddress">Alamat pengiriman *</label><textarea id="customerAddress" name="address" rows="3" placeholder="Alamat lengkap" required></textarea>
+      <label for="payment">Metode pembayaran *</label><select id="payment" required><option value="">Pilih metode</option><option>Transfer Bank (simulasi)</option><option>COD (simulasi)</option><option>E-Wallet (simulasi)</option></select>
+      <button class="submit-button" type="submit">Buat pesanan</button>
+      <p class="note">Demo front-end: pesanan tidak dikirim ke server atau diproses secara nyata.</p>
+    </form>
+  </section>
+</main>
+<footer><div class="container">© 2026 ATK Mart — Proyek Front-End E-Commerce Sederhana</div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
